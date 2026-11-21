@@ -2,7 +2,9 @@ import { PrismaService } from 'src/common/services/prisma/prisma.service.js';
 import { CourseRepositoryPort } from './course.repository.port.js';
 import { CreateCourseDto } from './dtos/create-course.dto.js';
 import { Course } from 'src/generated/prisma/client.js';
+import { Injectable } from '@nestjs/common';
 
+@Injectable()
 export class CourseRepository implements CourseRepositoryPort {
   constructor(private readonly prisma: PrismaService) {}
 
